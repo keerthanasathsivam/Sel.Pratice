@@ -19,6 +19,11 @@ public class Dropdown {
 		driver.findElement(By.xpath("//textarea[@id='textarea']")).sendKeys("Erode");
 		driver.findElement(By.xpath("//input[@id='female']")).click();
 		driver.findElement(By.xpath("//input[@id='saturday']")).click();
+		Thread.sleep(5000);
+		WebElement checkbox = driver.findElement(By.xpath("//input[@id='saturday']"));
+		if(checkbox.isSelected()) {
+			checkbox.click();
+		}
 		
 		
 	    WebElement countryDropdown=driver.findElement(By.xpath("//select[@id='country']"));
@@ -33,6 +38,7 @@ public class Dropdown {
 		}
 		
 	}
+
 
 
 
