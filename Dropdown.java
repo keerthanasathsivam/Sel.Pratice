@@ -24,8 +24,13 @@ public class Dropdown {
 		if(checkbox.isSelected()) {
 			checkbox.click();
 		}
+		f(checkbox.isSelected()) {
+			System.out.println("checkbox is  selected");
+		}else {
+			System.out.println("checkbox is not selected");
+			
 		
-		
+		}
 	    WebElement countryDropdown=driver.findElement(By.xpath("//select[@id='country']"));
 	    Select select=new Select(countryDropdown);
 	    select.selectByVisibleText("India");
@@ -38,6 +43,7 @@ public class Dropdown {
 		}
 		
 	}
+
 
 
 
